@@ -1,0 +1,23 @@
+{% extends 'theme.html' %}
+{% block content %}
+<h1>Menu</h1>
+<div class="container">
+ <div class="row">
+ {% for pizzamenu in pizzamenu %}
+ <div class="col-md-3">
+ <div class="container">
+ <div class="card" >
+ <img class="card-img-top" src="{{pizzamenu.image}}"
+alt="Card image cap">
+ <div class="card-body">
+ <h5 class="card-title">{{pizzamenu.name}}</h5>
+ <p class="card-text">{{pizzamenu.price}}</p>
+ <a href="#" class="btn btn-primary">order now</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ {% endfor %}
+ </div>
+</div>
+{% endblock %}
